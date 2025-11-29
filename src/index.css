@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500&display=swap');
+
+:root {
+  --eco-green-dark: #3d4f3f;
+  --eco-green: #5a6b5c;
+  --eco-green-light: #8a9a8c;
+  --eco-cream: #faf9f6;
+  --eco-cream-warm: #f5f3ef;
+  --eco-sage: #b8c4b8;
+  --eco-text: #2c2c2c;
+  --eco-text-light: #6b6b6b;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  background: linear-gradient(160deg, #d4e0d4 0%, #c5d6c5 50%, #b8ccb8 100%);
+  color: var(--eco-text);
+  letter-spacing: 0.01em;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Card styling */
+.card {
+  background: var(--eco-cream-warm) !important;
+  border: 1px solid rgba(90, 107, 92, 0.08) !important;
+  border-radius: 2px !important;
+  max-width: none;
+  width: 100%;
+  box-shadow: 0 4px 40px rgba(0, 0, 0, 0.04) !important;
+}
+
+.card-body {
+  padding: 3.5rem 3rem !important;
+}
+
+@media (min-width: 768px) {
+  .card-body {
+    padding: 4.5rem 4rem !important;
+  }
+}
+
+/* Typography */
+h1, h2, h3, h4, h5 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 400;
+  color: var(--eco-green-dark);
+  letter-spacing: -0.02em;
+}
+
+/* Button styling */
+.btn {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  padding: 1rem 2rem;
+  border-radius: 0;
+  transition: var(--transition);
+}
+
+.btn-primary {
+  background-color: var(--eco-green-dark) !important;
+  border: 1px solid var(--eco-green-dark) !important;
+  color: var(--eco-cream) !important;
+}
+
+.btn-primary:hover {
+  background-color: transparent !important;
+  border-color: var(--eco-green-dark) !important;
+  color: var(--eco-green-dark) !important;
+}
+
+.btn-success {
+  background-color: var(--eco-green-dark) !important;
+  border: 1px solid var(--eco-green-dark) !important;
+  color: var(--eco-cream) !important;
+  font-weight: 400;
+}
+
+.btn-success:hover {
+  background-color: transparent !important;
+  border-color: var(--eco-green-dark) !important;
+  color: var(--eco-green-dark) !important;
+}
+
+.btn-outline-secondary {
+  border: 1px solid var(--eco-green-light) !important;
+  color: var(--eco-text-light) !important;
+  background: transparent !important;
+}
+
+.btn-outline-secondary:hover {
+  background-color: var(--eco-green-dark) !important;
+  border-color: var(--eco-green-dark) !important;
+  color: var(--eco-cream) !important;
+}
+
+.btn-secondary {
+  background-color: transparent !important;
+  border: 1px solid var(--eco-sage) !important;
+  color: var(--eco-text-light) !important;
+}
+
+.btn-secondary:hover {
+  background-color: var(--eco-sage) !important;
+  border-color: var(--eco-sage) !important;
+  color: var(--eco-green-dark) !important;
+}
+
+.btn-lg {
+  padding: 1.1rem 2.5rem;
+  font-size: 0.72rem;
+}
+
+/* Progress bar */
+.progress {
+  background-color: var(--eco-sage) !important;
+  height: 1px !important;
+  border-radius: 0 !important;
+  overflow: visible !important;
+}
+
+.progress-bar {
+  background-color: var(--eco-green-dark) !important;
+  border-radius: 0 !important;
+}
+
+/* Form controls */
+.form-control {
+  border: none !important;
+  border-bottom: 1px solid var(--eco-sage) !important;
+  border-radius: 0 !important;
+  background-color: transparent !important;
+  padding: 1rem 0 !important;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  color: var(--eco-text);
+  transition: var(--transition);
+}
+
+.form-control:focus {
+  border-color: var(--eco-green-dark) !important;
+  box-shadow: none !important;
+  background-color: transparent !important;
+}
+
+.form-control::placeholder {
+  color: var(--eco-text-light);
+  opacity: 0.6;
+}
+
+.form-control-lg {
+  font-size: 1.1rem !important;
+}
+
+textarea.form-control {
+  border: 1px solid var(--eco-sage) !important;
+  padding: 1.25rem !important;
+  background-color: rgba(255,255,255,0.5) !important;
+  min-height: 120px;
+}
+
+textarea.form-control:focus {
+  border-color: var(--eco-green-dark) !important;
+  background-color: rgba(255,255,255,0.8) !important;
+}
+
+/* List group */
+.list-group {
+  border-radius: 0 !important;
+}
+
+.list-group-item {
+  background-color: rgba(255,255,255,0.6) !important;
+  border: none !important;
+  border-bottom: 1px solid rgba(184, 196, 184, 0.3) !important;
+  padding: 1.25rem 0 !important;
+  font-size: 0.95rem;
+}
+
+.list-group-item:last-child {
+  border-bottom: none !important;
+}
+
+.list-group-item strong {
+  font-weight: 500;
+  color: var(--eco-green-dark);
+}
+
+/* Alert */
+.alert-info {
+  background-color: rgba(184, 196, 184, 0.15) !important;
+  border: none !important;
+  border-left: 2px solid var(--eco-green) !important;
+  border-radius: 0 !important;
+  color: var(--eco-text) !important;
+  padding: 1.5rem !important;
+}
+
+/* Logo styles */
+.eco-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  margin-bottom: 2.5rem;
+}
+
+.eco-logo-text {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 2rem;
+  font-weight: 300;
+  color: var(--eco-green-dark);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+/* Utilities */
+.text-muted {
+  color: var(--eco-text-light) !important;
+  font-size: 0.85rem;
+}
+
+small.text-muted {
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.card {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Divider */
+.divider {
+  width: 40px;
+  height: 1px;
+  background: var(--eco-sage);
+  margin: 1.5rem auto;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--eco-cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--eco-sage);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--eco-green-light);
+}
+
+/* Responsive layout for results page */
+@media (max-width: 900px) {
+  .results-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
